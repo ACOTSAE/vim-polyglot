@@ -64,6 +64,7 @@ EOF
 
 run_vimscript('source tests/filetypes.vim')
 run_vimscript('source tests/extensions.vim')
+run_vimscript('source tests/sudoedit.vim')
 
 if !ENV['DEV']
   run_vimscript('source tests/native.vim')

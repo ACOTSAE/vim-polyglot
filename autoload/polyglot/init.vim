@@ -3574,6 +3574,12 @@ au BufNewFile,BufRead *.txt
 	\|   setf text
 	\| endif
 
+" sudoedit(8) edits a renamed temporary copy of a file, which defeats the
+" file name based detection above.  Recover the original name and fall back
+" to the contents when no file type was detected (or only the generic "conf"
+" fallback was used).
+au BufNewFile,BufRead * if !did_filetype() | call polyglot#sudoedit#Detect() | endif
+
 
 " NOTE: The above command could have ended the filetypedetect autocmd group
 " and started another one. Let's make sure it has ended to get to a consistent
