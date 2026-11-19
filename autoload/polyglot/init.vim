@@ -1769,6 +1769,10 @@ if !has_key(g:polyglot_is_disabled, 'gitignore')
   au BufNewFile,BufRead *.git/info/exclude,*/.config/git/ignore,{.,}gitignore setf gitignore
 endif
 
+if !has_key(g:polyglot_is_disabled, 'gitattributes')
+  au BufNewFile,BufRead {.,}gitattributes setf gitattributes
+endif
+
 if !has_key(g:polyglot_is_disabled, 'prolog')
   au! BufNewFile,BufRead,BufWritePost *.pl call polyglot#detect#Pl()
   au BufNewFile,BufRead *.pdb,*.pro,*.prolog,*.yap setf prolog
@@ -2892,7 +2896,7 @@ if !has_key(g:polyglot_is_disabled, 'autoindent')
       let &l:shiftwidth=shiftwidth
       try
         " Sunchronize tabstop with shiftwidth
-        let &l:softtabstop = -1
+        let &l:softtabstop = 0
       catch /^Vim\%((\a\+)\)\=:E487/
         " -1 was not supported before Vim 7.4
         let &l:softtabstop = a:num_spaces
