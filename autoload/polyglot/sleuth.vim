@@ -502,6 +502,7 @@ let s:globs = {
   \ 'smarty': '*.tpl',
   \ 'smcl': '*.hlp,*.ihlp,*.smcl',
   \ 'smith': '*.smt,*.smith',
+  \ 'smithy': '*.smithy',
   \ 'sml': '*.sml',
   \ 'smt2': '*.smt2,*.smt',
   \ 'snobol4': '*.sno,*.spt',
