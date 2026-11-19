@@ -59,7 +59,7 @@ let s:globs = {
   \ 'bzr': 'bzr_log.*',
   \ 'c': '*.c,*.cats,*.h,*.idc,*.qc',
   \ 'cabal': '*.cabal',
-  \ 'caddyfile': 'Caddyfile',
+  \ 'caddyfile': 'Caddyfile,Caddyfile.*,*.Caddyfile',
   \ 'calendar': 'calendar',
   \ 'carp': '*.carp',
   \ 'catalog': 'catalog,sgml.catalog*',

@@ -2486,7 +2486,8 @@ if !has_key(g:polyglot_is_disabled, 'carp')
 endif
 
 if !has_key(g:polyglot_is_disabled, 'caddyfile')
-  au BufNewFile,BufRead Caddyfile setf caddyfile
+  au BufNewFile,BufRead *.Caddyfile,Caddyfile setf caddyfile
+  au BufNewFile,BufRead Caddyfile.* call s:StarSetf('caddyfile')
 endif
 
 if !has_key(g:polyglot_is_disabled, 'awk')

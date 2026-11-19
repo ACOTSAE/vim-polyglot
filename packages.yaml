@@ -363,7 +363,7 @@ filetypes:
   filenames:
   - Caddyfile
   - Caddyfile.*
-  - *.Caddyfile
+  - '*.Caddyfile'
 ---
 name: cpp-modern
 remote: bfrg/vim-cpp-modern
